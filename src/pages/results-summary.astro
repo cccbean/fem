@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+	<div class="flex-1 md:grid md:place-items-center">
+		<div class="md:grid md:grid-cols-2 md:max-w-3xl md:mx-auto md:rounded-3xl md:shadow-xl md:shadow-indigo-100">
+			<div
+				class="flex flex-col items-center bg-gradient-to-b from-indigo-500 to-indigo-800 px-12 pb-6 pt-4 text-slate-300 rounded-b-3xl md:rounded-3xl md:pt-8 md:pb-10 md:px-14"
+			>
+				<p class="pb-4 text-lg md:text-xl md:pb-8">Your Result</p>
+				<div
+					class="flex aspect-square w-fit flex-col items-center rounded-full bg-gradient-to-b from-indigo-800 to-indigo-500 p-4 md:p-14"
+				>
+					<span class="text-4xl font-bold text-white md:text-6xl">76</span>
+					 of 100
+				</div>
+				<p class="text-white font-bold text-xl pt-4 pb-2 md:text-3xl md:pt-12">Great</p>
+				<p class="text-center md:text-lg">
+					You scored higher than 65% of the people who have taken these tests.
+				</p>
+			</div>
+
+			<div class="text-slate-700 p-6 flex flex-col gap-4 md:p-10 md:justify-around">
+				<p class="text-lg font-bold md:text-2xl">Summary</p>
+				<div class="flex flex-col gap-4">
+          <div class="flex justify-between bg-red-50 p-4 rounded-xl">
+                    <div class="flex gap-2">
+                      <img src="../../public/results-summary/icon-reaction.svg" alt="">
+                      <p class="font-bold text-red-400">Reaction</p>
+                    </div>
+            <p class="font-bold"><span>80</span><span class="text-slate-400"> / 100</span></p>
+          </div>
+                  <div class="flex justify-between bg-yellow-50 p-4 rounded-xl">
+                    <div class="flex gap-2">
+                      <img src="../../public/results-summary/icon-memory.svg" alt="">
+                      <p class="font-bold text-yellow-500">Memory</p>
+                    </div>
+            <p class="font-bold"><span>92</span><span class="text-slate-400"> / 100</span></p>
+          </div>
+                  <div class="flex justify-between bg-green-50 p-4 rounded-xl">
+                    <div class="flex gap-2">
+                      <img src="../../public/results-summary/icon-verbal.svg" alt="">
+                      <p class="font-bold text-green-500">Verbal</p>
+                    </div>
+            <p class="font-bold"><span>61</span><span class="text-slate-400"> / 100</span></p>
+          </div>
+                  <div class="flex justify-between bg-indigo-50 p-4 rounded-xl">
+                    <div class="flex gap-2">
+                      <img src="../../public/results-summary/icon-visual.svg" alt="">
+                      <p class="font-bold text-indigo-500">Visual</p>
+                    </div>
+            <p class="font-bold"><span>72</span><span class="text-slate-400"> / 100</span></p>
+          </div>
+        </div>
+				<button class="bg-indigo-900 text-slate-100 py-4 rounded-full font-bold hover:bg-gradient-to-b hover:from-indigo-500 hover:to-indigo-800">Continue</button>
+			</div>
+		</div>
+	</div>
+</BaseLayout>
