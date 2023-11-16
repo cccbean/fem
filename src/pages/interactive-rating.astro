@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+	<div class="grid flex-1 place-items-center bg-slate-950">
+		<div
+			id="component"
+			class="flex max-w-sm flex-col gap-4 rounded-2xl bg-gradient-to-b from-slate-800 to-slate-900 p-6 text-slate-400"
+		>
+			<div class="flex aspect-square w-8 items-center justify-center rounded-full bg-slate-700 p-1">
+				<img class="w-3" src="/interactive-rating/icon-star.svg" alt="" />
+			</div>
+			<h2 class="pt-2 text-2xl font-bold text-slate-100">How did we do?</h2>
+			<p class="pb-6">
+				Please let us know how we did with your support request. All feedback is appreciated to help
+				us improve our offering!
+			</p>
+			<form
+				class="flex flex-col gap-4"
+				hx-post="/partials/rating-thank-you"
+				hx-target="#component"
+				hx-swap="outerHTML"
+			>
+				<fieldset class="flex justify-between pb-4">
+					<input class="peer/1 hidden" type="radio" id="radio1" name="rating" value="1" />
+					<label
+						class="flex aspect-square w-12 cursor-pointer items-center justify-center rounded-full bg-slate-800 hover:bg-orange-500 hover:text-slate-100 peer-checked/1:bg-slate-400 peer-checked/1:text-slate-100"
+						for="radio1"
+					>
+						1
+					</label>
+
+					<input class="peer/2 hidden" type="radio" id="radio2" name="rating" value="2" />
+					<label
+						class="flex aspect-square w-12 cursor-pointer items-center justify-center rounded-full bg-slate-800 hover:bg-orange-500 hover:text-slate-100 peer-checked/2:bg-slate-400 peer-checked/2:text-slate-100"
+						for="radio2"
+					>
+						2
+					</label>
+
+					<input class="peer/3 hidden" type="radio" id="radio3" name="rating" value="3" />
+					<label
+						class="flex aspect-square w-12 cursor-pointer items-center justify-center rounded-full bg-slate-800 hover:bg-orange-500 hover:text-slate-100 peer-checked/3:bg-slate-400 peer-checked/3:text-slate-100"
+						for="radio3"
+					>
+						3
+					</label>
+
+					<input class="peer/4 hidden" type="radio" id="radio4" name="rating" value="4" />
+					<label
+						class="flex aspect-square w-12 cursor-pointer items-center justify-center rounded-full bg-slate-800 hover:bg-orange-500 hover:text-slate-100 peer-checked/4:bg-slate-400 peer-checked/4:text-slate-100"
+						for="radio4"
+					>
+						4
+					</label>
+
+					<input class="peer/5 hidden" type="radio" id="radio5" name="rating" value="5" />
+					<label
+						class="flex aspect-square w-12 cursor-pointer items-center justify-center rounded-full bg-slate-800 hover:bg-orange-500 hover:text-slate-100 peer-checked/5:bg-slate-400 peer-checked/5:text-slate-100"
+						for="radio5"
+					>
+						5
+					</label>
+				</fieldset>
+				<button
+					id="submit-btn"
+					class="group relative rounded-full bg-orange-500 py-3 font-bold tracking-widest text-slate-100 hover:bg-slate-100 hover:text-orange-500 disabled:hover:bg-orange-500 disabled:hover:text-slate-100"
+					type="submit"
+					disabled
+				>
+					SUBMIT
+					<div
+						class="absolute top-0 hidden h-full w-full rounded-full bg-slate-700 opacity-40 group-disabled:block"
+					>
+					</div>
+				</button>
+			</form>
+		</div>
+	</div>
+</BaseLayout>
+
+<script>
+	const radioInputs = document.querySelectorAll('input') as NodeListOf<HTMLInputElement>;
+	const submitBtn = document.getElementById('submit-btn') as HTMLButtonElement;
+	radioInputs.forEach((input) => {
+		input.addEventListener('click', () => {
+			submitBtn.disabled = false;
+		});
+	});
+</script>
