@@ -1,0 +1,50 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+	<div class="grid flex-1 place-items-center bg-slate-100 py-4">
+		<div
+			class="flex max-w-sm flex-col overflow-hidden rounded-xl text-slate-200 md:max-w-5xl md:flex-row"
+		>
+			<div class="flex flex-col justify-between bg-[#E38826] p-12 md:p-12">
+				<img class="w-16" src="/three-column-preview-card/icon-sedans.svg" alt="" />
+				<h2 class="pb-8 pt-8 text-3xl font-bold text-slate-100 md:text-4xl">SEDANS</h2>
+				<p class="pb-8 leading-relaxed md:pb-24">
+					Choose a sedan for its affordability and excellent fuel economy. Ideal for cruising in the
+					city or on your next road trip.
+				</p>
+				<button
+					class="rounded-full border border-slate-100 bg-slate-100 px-8 py-2 text-[#E38826] hover:bg-[#E38826] hover:text-slate-100"
+					>Learn More</button
+				>
+			</div>
+
+			<div class="flex flex-col justify-between bg-[#006970] p-12 md:p-12">
+				<img class="w-16" src="/three-column-preview-card/icon-suvs.svg" alt="" />
+				<h2 class="pb-8 pt-8 text-3xl font-bold text-slate-100 md:text-4xl">SUVS</h2>
+				<p class="pb-8 leading-relaxed md:pb-24">
+					Take an SUV for its spacious interior, power, and versatility. Perfect for your next
+					family vacation and off-road adventures.
+				</p>
+				<button
+					class="rounded-full border border-slate-100 bg-slate-100 px-8 py-2 text-[#006970] hover:bg-[#006970] hover:text-slate-100"
+					>Learn More</button
+				>
+			</div>
+
+			<div class="flex flex-col justify-between bg-[#004241] p-12 md:p-12">
+				<img class="w-16" src="/three-column-preview-card/icon-luxury.svg" alt="" />
+				<h2 class="pb-8 pt-8 text-3xl font-bold text-slate-100 md:text-4xl">LUXURY</h2>
+				<p class="pb-8 leading-relaxed md:pb-24">
+					Cruise in the best car brands without the bloated prices. Enjoy the enchanced comfort of a
+					luxury rental and arrive in style.
+				</p>
+				<button
+					class="rounded-full border border-slate-100 bg-slate-100 px-8 py-2 text-[#004241] hover:bg-[#004241] hover:text-slate-100"
+					>Learn More</button
+				>
+			</div>
+		</div>
+	</div>
+</BaseLayout>
