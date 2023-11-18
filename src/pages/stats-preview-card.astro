@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+	<div class="grid flex-1 place-items-center bg-slate-950 px-4">
+		<div
+			class="max-w-xs overflow-hidden rounded-lg bg-[#1B1938] text-center text-slate-400 md:max-w-5xl grid md:grid-cols-2 md:text-left"
+		>
+			<div class="relative md:col-start-2">
+				<img class="md:hidden" src="/stats-preview-card/image-header-mobile.jpg" alt="" />
+				<img class="hidden md:block w-full h-full" src="/stats-preview-card/image-header-desktop.jpg" alt="" />
+				<div class="absolute top-0 h-full w-full bg-purple-900 opacity-60"></div>
+			</div>
+
+			<div class="flex flex-col gap-4 px-6 pb-8 pt-10 md:col-start-1 md:row-start-1 md:pr-16 md:justify-between md:py-12 md:pl-12">
+				<div class="flex flex-col gap-4">
+          <h2 class="text-3xl font-bold text-slate-100">
+            Get <span class="text-purple-500">insights</span> that help your business grow.
+          </h2>
+          <p class="pb-4 leading-relaxed">
+            Discover the benefits of data analytics and make better decisions regarding revenue,
+            customer experience, and overall efficieny.
+          </p>
+        </div>
+
+				<div class="flex flex-col gap-6 md:flex-row md:gap-0 md:justify-between">
+          <div>
+            <p class="pb-1 text-2xl font-bold text-slate-100">10k+</p>
+            <p class="text-xs tracking-wider">COMPANIES</p>
+          </div>
+          <div>
+            <p class="pb-1 text-2xl font-bold text-slate-100">314</p>
+            <p class="text-xs tracking-wider">TEMPLATES</p>
+          </div>
+          <div>
+            <p class="pb-1 text-2xl font-bold text-slate-100">12M+</p>
+            <p class="text-xs tracking-wider">QUERIES</p>
+          </div>
+        </div>
+			</div>
+		</div>
+	</div>
+</BaseLayout>
